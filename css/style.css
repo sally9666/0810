@@ -64,6 +64,18 @@ body{
 
 .text-white{color:white !important}
 .bg-red{background-color: var(--colorBtn) !important;}
+.bg-white{background-color: white !important;}
+.rounded{border-radius: 10px;}
+
+.text-gray{
+    color:#ddd !important
+}
+.text-green{
+    color:var(--colorGBg) !important
+}
+.border-0{
+    border:0 !important
+}
 
 #mainBanner{
     background: url(../img/bg.jpg) no-repeat ;
@@ -265,6 +277,8 @@ body{
     position: relative;
     padding: 3rem;
 }
+
+
 #sec4 .container{
     position: relative;
     z-index: 10;
@@ -274,12 +288,12 @@ body{
     position: absolute;
     width: 50%;
     height: 100%;
-    top: 0;
+    top: 0;s
 }
 #sec4:before{
     right: 0;
-   background: url(../img/map.png) no-repeat right top;
-   background-size: 100%;
+   background: url(../img/map.png) no-repeat right center #324038;
+   background-size: auto 130%;
 
 
 }
@@ -288,6 +302,64 @@ body{
     background: url(../img/form.png) no-repeat;
     background-size: 100%;
 }
-#way dt{}
-#way dd{}
-#way dd:not(:ask-child){}
+#sec4 .text-green{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+#way{
+    padding-left:5rem;
+}
+#way dt{
+
+}
+#way dd{
+}
+#way dd:not(:last-child){
+    margin-bottom: 1rem;
+}
+#form{
+    display: flex;
+    justify-content:end ;
+    
+}
+#form > div{
+    /*max-width: 400px;*/
+}
+#form li{
+    line-height: 2.5;
+    padding: 0.25em 0;
+}
+#form li strong + *{
+    min-width:200px;
+    margin-left: 1rem;
+}
+#form button{
+    min-width: 250px;
+    line-height: 2.5;
+    float: right;
+    margin-top:0.25em ;
+}
+.ofh{
+    overflow: hidden;
+}
+.agree{
+    margin-top: 1rem ;
+}
+.agree input{
+    display: none;
+
+}
+.agree label:before{
+    content:"V";
+    color: transparent;
+    display: inline-block;
+    width: 1rem; height: 1rem;
+    border: 1px solid white;
+    margin-right: 0.5rem;
+}
+   
+.agree input:checked + label:before{
+    content:"V";
+    color: white;
+}
+   
